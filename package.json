@@ -6,9 +6,18 @@
   "repository": "git@github.com:belkamax05/shell-ts.git",
   "author": "Maksym Bondarchuk belkamax05@gmail.com>",
   "license": "MIT",
-  "scripts": {},
+  "packageManager": "yarn@4.2.2",
+  "scripts": {
+    "hello": "ts-node scripts/hello.ts"
+  },
   "devDependencies": {
     "esbuild": "^0.21.4",
-    "npkill": "^0.12.1"
+    "npkill": "^0.12.1",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "@clack/prompts": "^0.7.0"
   }
 }
