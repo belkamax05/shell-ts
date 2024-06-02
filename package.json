@@ -8,9 +8,11 @@
   "license": "MIT",
   "packageManager": "yarn@4.2.2",
   "scripts": {
+    "dir": "ts-node scripts/dir.ts",
     "hello": "ts-node scripts/hello.ts"
   },
   "devDependencies": {
+    "@types/node": "^20.13.0",
     "esbuild": "^0.21.4",
     "npkill": "^0.12.1",
     "ts-node": "^10.9.2",

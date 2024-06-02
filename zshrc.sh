@@ -1,9 +1,10 @@
 # include this file into your .zshrc file
 # source ~/dev/shell-ts/zshrc.sh
-typeset -gx SHELLTSDIR="${${(%):-%N}:A:h}"
+typeset -gx STS_DIR="${${(%):-%N}:A:h}"
 
-# alias hello="echo 'Hello World!' not implemented yet"
-alias shell-ts="echo 'shell-ts v0.0.1'"
-alias shell-ts-path="echo $PWD"
-alias hello="yarn --cwd $SHELLTSDIR hello"
-alias version="yarn --cwd $SHELLTSDIR -v"
+alias sts-yarn="yarn --cwd $STS_DIR"
+alias sts-run="sts-yarn"
+
+alias sts-dir="sts-run dir"
+alias sts-hello="sts-run hello"
+alias sts-y-v="yarn --cwd $STS_DIR -v"
