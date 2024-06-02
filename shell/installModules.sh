@@ -3,4 +3,5 @@ function installModules {
     pushd $STS_DIR >/dev/null
     yarn install
     popd >/dev/null
+    sts-hello
 }
