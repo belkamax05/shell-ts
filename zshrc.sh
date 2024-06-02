@@ -2,6 +2,8 @@
 # source ~/dev/shell-ts/zshrc.sh
 typeset -gx STS_DIR="${${(%):-%N}:A:h}"
 
+alias sts-install="yarn --cwd $STS_DIR install"
+
 alias sts-yarn="yarn --cwd $STS_DIR"
 alias sts-run="sts-yarn"
 
