@@ -1,6 +1,6 @@
 SHELL_TS_PATH=~/dev/shell-ts
 
-if ! grep -q "SHELL_TS_PATH=$SHELL_TS_PATH" ~/.zshrc; then
+if ! grep -q "SHELL_TS_PATH=" ~/.zshrc; then
     echo "
 SHELL_TS_PATH=$SHELL_TS_PATH
 if [[ ! -d \$SHELL_TS_PATH ]]; then
