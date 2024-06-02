@@ -4,7 +4,6 @@
 typeset -gx STS_DIR="${${(%):-%N}:A:h}"
 
 function sts-source {
-    echo "$STS_DIR/$1"
   source "$STS_DIR/$1"
 }
 
@@ -20,7 +19,6 @@ alias sts-y-v="yarn --cwd $STS_DIR -v"
 function sts-message {
   echo -e "\033[34m[STS]\033[0m $@"
 }
-
 
 sts-source 'shell/validateModules.sh'
 validateModules
