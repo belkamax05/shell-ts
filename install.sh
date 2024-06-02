@@ -1,4 +1,4 @@
-SHELL_TS_PATH=${SHELL_TS_PATH:-~/dev/shell-ts}
+SHELL_TS_PATH=${SHELL_TS_PATH:-~/shell-ts}
 
 if ! grep -q "SHELL_TS_PATH=" ~/.zshrc; then
     echo "
