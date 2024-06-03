@@ -8,6 +8,7 @@
   "license": "MIT",
   "packageManager": "yarn@4.2.2",
   "scripts": {
+    "sts": "ts-node scripts/sts.ts",
     "dir": "ts-node scripts/dir.ts",
     "hello": "ts-node scripts/hello.ts"
   },
@@ -17,7 +18,8 @@
     "npkill": "^0.12.1",
     "ts-node": "^10.9.2",
     "tsconfig-paths": "^4.2.0",
-    "typescript": "^5.4.5"
+    "typescript": "^5.4.5",
+    "yargs": "^17.7.2"
   },
   "dependencies": {
     "@clack/prompts": "^0.7.0"
