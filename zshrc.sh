@@ -15,7 +15,8 @@ alias sts-yarn="yarn --cwd $STS_DIR"
 alias sts-run="sts-yarn --silent"
 
 alias sts-dir="sts-run dir"
-alias sts-hello="sts-run hello"
+# alias sts-hello="sts-run hello"
+alias hello="sts hello"
 alias sts-y-v="yarn --cwd $STS_DIR -v"
 alias sts-shutdown="shutdown.exe -s -t 0"
 
