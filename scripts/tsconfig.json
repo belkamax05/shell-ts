@@ -1,4 +1,10 @@
 {
     "extends": "../tsconfig.base.json",
-    "compilerOptions": {}
+    "compilerOptions": {
+        "esModuleInterop": true
+    },
+    "include": [
+        "**/*",
+        "../libs/sts/**/*.ts"
+    ]
 }

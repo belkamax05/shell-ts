@@ -8,13 +8,21 @@
   "license": "MIT",
   "packageManager": "yarn@4.2.2",
   "scripts": {
-    "sts": "ts-node scripts/sts.ts",
+    "build": "yarn build:sts",
+    "build:sts": "esbuild libs/sts/src/index.ts --bundle --platform=node --outfile=dist/sts/index.js",
+    "clear": "yarn clear:sts",
+    "clear:sts": "rm -rf dist/sts",
+    "sts": "node bin/sts.js",
+    "sts-dev": "yarn run-script scripts/sts.ts",
     "dir": "ts-node scripts/dir.ts",
-    "hello": "ts-node scripts/hello.ts"
+    "hello": "ts-node scripts/hello.ts",
+    "--- utils ---": "",
+    "run-script": "ts-node -P scripts/tsconfig.json -r tsconfig-paths/register"
   },
   "devDependencies": {
     "@types/node": "^20.13.0",
     "esbuild": "^0.21.4",
+    "minimist": "^1.2.8",
     "npkill": "^0.12.1",
     "ts-node": "^10.9.2",
     "tsconfig-paths": "^4.2.0",

@@ -8,7 +8,8 @@ function sts-source {
 }
 # echo "STS hi from zshrc.sh"
 # alias sts-install="yarn --cwd $STS_DIR install"
-alias sts="yarn --cwd $STS_DIR sts"
+# alias sts="yarn --cwd $STS_DIR --silent sts"
+alias sts="node $STS_DIR/bin/sts.js"
 alias sts-cd="cd $STS_DIR"
 alias sts-yarn="yarn --cwd $STS_DIR"
 alias sts-run="sts-yarn --silent"
