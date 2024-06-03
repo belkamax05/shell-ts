@@ -6,7 +6,6 @@ typeset -gx STS_DIR="${${(%):-%N}:A:h}"
 function sts-source {
   source "$STS_DIR/$1"
 }
-# echo "STS hi from zshrc.sh"
 # alias sts-install="yarn --cwd $STS_DIR install"
 # alias sts="yarn --cwd $STS_DIR --silent sts"
 alias shell-ts="cd $STS_DIR"
