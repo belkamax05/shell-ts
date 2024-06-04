@@ -9,6 +9,7 @@ try {
   const repoRoot = dirname(__dirname);
   const haveDist = existsSync(join(repoRoot, 'dist/index.js'));
   if (!haveDist) {
+    console.log('dist missing, compiling');
     spawnSync('yarn', ['build'], {
       cwd: repoRoot,
       stdio: 'ignore',

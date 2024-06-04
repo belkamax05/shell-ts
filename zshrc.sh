@@ -3,13 +3,16 @@
 
 typeset -gx STS_DIR="${${(%):-%N}:A:h}"
 
+
 function sts-source {
   source "$STS_DIR/$1"
 }
 # alias sts-install="yarn --cwd $STS_DIR install"
 # alias sts="yarn --cwd $STS_DIR --silent sts"
 alias shell-ts="cd $STS_DIR"
-alias sts="node $STS_DIR/bin/sts.js"
+# alias sts="node $STS_DIR/bin/sts.js"
+alias sts="$STS_DIR/scripts/sts.sh"
+
 alias sts-cd="shell-ts"
 alias sts-yarn="yarn --cwd $STS_DIR"
 alias sts-run="sts-yarn --silent"
@@ -25,3 +28,4 @@ function sts-message {
 }
 
 sts-source 'shell/validateModules.sh'
+sts-source 'shell/nav.sh'
