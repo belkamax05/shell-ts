@@ -5,5 +5,5 @@ function _nav {
   done
   compadd -- ${nav_suggestions}
 }
-compdef _nav nav
+compdef _nav sts nav
 

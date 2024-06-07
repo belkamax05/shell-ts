@@ -1,1 +1,1 @@
-console.log(process.cwd());
+console.log(`cwd=${process.cwd()}`);

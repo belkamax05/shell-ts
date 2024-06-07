@@ -1,5 +1,3 @@
-stsSourceGlobal "nav-list-define.sh"
-
 function stsExtendNav {
     # echo "stsExtendNav params: $0, $1, $2, $3"
     local cmd="$1"

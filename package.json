@@ -14,8 +14,6 @@
     "clear:sts": "rm -rf dist/sts",
     "sts": "node bin/sts.js",
     "sts-dev": "yarn run-script scripts/sts.ts",
-    "dir": "ts-node scripts/dir.ts",
-    "hello": "ts-node scripts/hello.ts",
     "--- utils ---": "",
     "run-script": "ts-node -P scripts/tsconfig.json -r tsconfig-paths/register"
   },
