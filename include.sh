@@ -1,7 +1,8 @@
-if [ "$STS_ZPROFILE_LOADED" != true ]; then
-  echo "\033[33mError: STS_ZPROFILE_LOADED is not set\033[0m\n[TODO] include '${${(%):-%N}:A:h}/zprofile.sh' into your .zprofile."
-  return 1
-fi
+# if [ "$STS_ZPROFILE_LOADED" != true ]; then
+#   echo "\033[33mError: STS_ZPROFILE_LOADED is not set\033[0m\n[TODO] include '${${(%):-%N}:A:h}/zprofile.sh' into your .zprofile."
+#   return 1
+# fi
+source "$STS_DIR/system/zprofile.sh"
 
 export PATH="$PATH:./node_modules/.bin"
 

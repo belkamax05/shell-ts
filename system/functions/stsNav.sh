@@ -37,7 +37,7 @@ function stsNav() {
             code -r .
         fi
     else
-        echo "Unknown nav path $cmd"
+        cd $cmd
     fi
 
 }
