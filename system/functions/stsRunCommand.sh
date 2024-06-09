@@ -30,7 +30,7 @@ function stsRunCommand() {
             return 1
         fi
     fi
-    echo "[Step-1] cmd=$cmd, ext=$ext"
+    # echo "[Step-1] cmd=$cmd, ext=$ext"
     # for extItem in sh js ts; do
     #     if [ -f "$STS_DIR/command/$cmd.$extItem" ]; then
     #         ext="$extItem"
@@ -51,7 +51,7 @@ function stsRunCommand() {
 
     case "$ext" in
     "sh")
-        echo "!!source!! $cmd"
+        # echo "!!source!! $cmd"
         shift
         source "$cmd" "$@"
         # "$filePath $2"
