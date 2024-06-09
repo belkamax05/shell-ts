@@ -16,15 +16,21 @@ function stsRunCommand() {
             stsRunCommand "$closestScript" "$@"
             return
         fi
-    elif [ ! -f "$cmd" ]; then
+    fi
+    if [ ! -f "$cmd" ]; then
+        echo "File not found: $cmd"
         local closestScript=$(find "$STS_DIR/command" -type f -name "$cmd" | head -n 1)
         if [ -n "$closestScript" ]; then
+            echo "Runs from closest script: $closestScript"
             shift
             stsRunCommand "$closestScript" "$@"
             return
+        else
+            echo "No closest script found for $cmd"
+            return 1
         fi
     fi
-    # echo "[Step-1] cmd=$cmd, ext=$ext"
+    echo "[Step-1] cmd=$cmd, ext=$ext"
     # for extItem in sh js ts; do
     #     if [ -f "$STS_DIR/command/$cmd.$extItem" ]; then
     #         ext="$extItem"
@@ -45,7 +51,7 @@ function stsRunCommand() {
 
     case "$ext" in
     "sh")
-        # echo "!!source!! $filePath"
+        echo "!!source!! $cmd"
         shift
         source "$cmd" "$@"
         # "$filePath $2"

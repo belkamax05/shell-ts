@@ -2,11 +2,11 @@
 #   echo "\033[33mError: STS_ZPROFILE_LOADED is not set\033[0m\n[TODO] include '${${(%):-%N}:A:h}/zprofile.sh' into your .zprofile."
 #   return 1
 # fi
-source "$STS_DIR/system/zprofile.sh"
+# source "$STS_DIR/system/zprofile.sh"
 
 export PATH="$PATH:./node_modules/.bin"
 
-# typeset -gx STS_DIR="${${(%):-%N}:A:h}"
+typeset -gx STS_DIR="${${(%):-%N}:A:h}"
 source "$STS_DIR/system/include.sh"
 
 alias sts-yarn="yarn --cwd $STS_DIR"

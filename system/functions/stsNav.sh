@@ -20,23 +20,28 @@ function stsNav() {
     #? Filtering system commands
     # echo "Nav s2 cmd=$cmd, code_flag=$code_flag"
     if [ "$cmd" = "list" ]; then
-        sts "system/nav/list.sh" "$@"
+        echo "List to be runned"
+        sts system/nav/list "$@"
         return
     fi
 
     #? Processing
 
     local dir="${nav_list[$cmd]}"
-    echo "Nav s3 cmd=$cmd, navDir=$dir"
+    # echo "Nav s3 cmd=$cmd, dir=$dir"
     if [ -n "$dir" ]; then
-        echo "Cding6... $dir"
+        # echo "Cding dir... $dir"
         cd $dir
-        # stsNav "$dir"
         if ((code_flag)); then
-            echo "Rsing..."
             code -r .
         fi
+        cd $dir
     else
+        # echo "Cding cmd... $cmd"
+        cd $cmd
+        if ((code_flag)); then
+            code -r .
+        fi
         cd $cmd
     fi
 

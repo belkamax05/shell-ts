@@ -10,9 +10,9 @@ stsSourceGlobal "nav-list.sh"
 
 #? Functions
 # Loads globally to simplify dev of other modules, every function here will become available for subsequent scripts
+stsSourceFunction "sts.sh"
 stsSourceFunction "stsRunCommand.sh"
 stsSourceFunction "stsRunWithPermissions.sh"
-stsSourceFunction "sts.sh"
 stsSourceFunction "stsExtend.sh"
 stsSourceFunction "stsExtendNav.sh"
 stsSourceFunction "stsNav.sh"
