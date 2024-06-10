@@ -13,6 +13,8 @@ stsSystem "global/lists.sh"
 #? Functions
 # Loads globally to simplify dev of other modules, every function here will become available for subsequent scripts
 stsSystem "function/sts.sh"
+stsSystem "function/stsRunScriptFile.sh"
+stsSystem "function/stsFindScriptName.sh"
 stsSystem "function/stsRunCommand.sh"
 stsSystem "function/stsRunWithPermissions.sh"
 stsSystem "function/stsExtend.sh"

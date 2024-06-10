@@ -4,7 +4,7 @@ function stsSource() {
     if [ -f "$fullPath" ]; then
         source "$fullPath"
     else
-        echo "File not found: $fullPath"
+        echo "$STS_ERROR_PREFFIX[stsSource] File not found: $fullPath"
     fi
 }
 
