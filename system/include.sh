@@ -20,6 +20,7 @@ stsSystem "function/stsRunWithPermissions.sh"
 stsSystem "function/stsExtend.sh"
 stsSystem "function/stsExtendNav.sh"
 stsSystem "function/stsNav.sh"
+stsSystem "function/stsCloneSource.sh"
 
 #? Triggers
 # Loads globally and covers all aspects of system-like commands, which need of special functionality to get triggered in advance
