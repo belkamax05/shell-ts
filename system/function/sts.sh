@@ -3,9 +3,38 @@ function sts() {
     if [ $# -eq 0 ]; then
         sts hello
     else
-        if [ "$1" = "run" ]; then
+        local cmd="$1"
+        case "$cmd" in
+        #? Go modules
+        "compile")
+            stsCompile "$@"
+            ;;
+        "print")
+            sts go "$@"
+            ;;
+        "print2")
+            sts go "$@"
+            ;;
+        #! End go modules
+        "run")
             shift
-        fi
-        stsRunCommand "$@"
+            stsRunCommand "$@"
+            ;;
+        "nav")
+            shift
+            stsNav "$@"
+            ;;
+        "extend")
+            shift
+            stsExtend "$@"
+            ;;
+        "go")
+            shift
+            stsGo "$@"
+            ;;
+        *)
+            stsRunCommand "$@"
+            ;;
+        esac
     fi
 }

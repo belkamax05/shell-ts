@@ -4,7 +4,9 @@ function stsRunScriptFile() {
 
     local filePath=$(basename "$cmd" ."$ext")
 
-    # echo "run: $cmd, ext=$ext"
+    if [ ! -f "$cmd" ]; then
+        return 1
+    fi
 
     case "$ext" in
     "sh")

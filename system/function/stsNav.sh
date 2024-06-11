@@ -28,21 +28,21 @@ function stsNav() {
     #? Processing
 
     local dir="${nav_list[$cmd]}"
+    if [ -z "$dir" ]; then
+        #? location in dictionary not found, applying original argument $cmd
+        dir=$cmd
+    fi
+
     # echo "Nav s3 cmd=$cmd, dir=$dir"
     if [ -n "$dir" ]; then
         # echo "Cding dir... $dir"
         cd $dir
+        local newDir=$(pwd)
         if ((code_flag)); then
             code -r .
         fi
-        cd $dir
-    else
-        # echo "Cding cmd... $cmd"
-        cd $cmd
-        if ((code_flag)); then
-            code -r .
-        fi
-        cd $cmd
+        echo "cd $newDir\nclear" >>"$STS_DIR/next_start.sh"
+        restart
     fi
 
 }

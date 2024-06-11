@@ -21,6 +21,8 @@ stsSystem "function/stsExtend.sh"
 stsSystem "function/stsExtendNav.sh"
 stsSystem "function/stsNav.sh"
 stsSystem "function/stsCloneSource.sh"
+stsSystem "function/stsGo.sh"
+stsSystem "function/stsCompile.sh"
 
 #? Triggers
 # Loads globally and covers all aspects of system-like commands, which need of special functionality to get triggered in advance
@@ -28,3 +30,5 @@ stsSystem "function/stsCloneSource.sh"
 stsSystem "trigger/nav-autocomplete.sh"
 stsSystem "trigger/nav-default-extensions.sh"
 stsSystem "trigger/command-not-found-replace.sh"
+stsSystem "trigger/compile-go.sh"
+stsSystem "trigger/next-start.sh"
