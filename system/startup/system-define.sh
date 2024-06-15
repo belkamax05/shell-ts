@@ -1,0 +1,1 @@
+export STS_USER_CONFIG_DIR="$HOME/.sts"

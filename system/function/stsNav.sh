@@ -41,8 +41,11 @@ function stsNav() {
         if ((code_flag)); then
             code -r .
         fi
-        echo "cd $newDir\nclear" >>"$STS_DIR/next_start.sh"
-        restart
+        if ((code_flag)); then
+            echo "cd $newDir\nclear" >>"$STS_DIR/next_start.sh"
+            restart
+        fi
+
     fi
 
 }

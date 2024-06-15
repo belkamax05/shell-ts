@@ -1,3 +1,3 @@
-if [ ! -f "$STS_DIR/shell-ts" ]; then
+if [ ! -f "$STS_DIR/bin/sts-go" ]; then
     sts compile
 fi

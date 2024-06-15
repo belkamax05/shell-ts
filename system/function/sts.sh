@@ -9,6 +9,14 @@ function sts() {
         "compile")
             stsCompile "$@"
             ;;
+        "go")
+            shift
+            stsGo "$@"
+            ;;
+        "go-dev")
+            shift
+            stsGoDev "$@"
+            ;;
         "print")
             sts go "$@"
             ;;
@@ -28,9 +36,9 @@ function sts() {
             shift
             stsExtend "$@"
             ;;
-        "go")
+        "set-config")
             shift
-            stsGo "$@"
+            stsWriteConfig "$@"
             ;;
         *)
             stsRunCommand "$@"

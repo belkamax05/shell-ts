@@ -1,0 +1,1 @@
+export STS_DEBUG_LIFECYCLE=false
