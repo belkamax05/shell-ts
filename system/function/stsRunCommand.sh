@@ -2,15 +2,10 @@ function stsRunCommand() {
     local cmd="$1"
     local ext="${cmd##*.}"
 
-    local filePath=$(stsFindScriptName "$cmd")
-    # echo "Running $cmd => $filePath"
+    stsRunBin "$cmd" "$@"
 
-    if [ ! -f "$filePath" ]; then
-        # echo "File not found: $filePath,,, $@"
-        # return 1
-        sts go "$@"
-        return
-    fi
+    local filePath=$(stsFindScriptName "$cmd")
+
     shift
     stsRunScriptFile "$filePath" "$@"
 }

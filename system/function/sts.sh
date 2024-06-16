@@ -36,6 +36,16 @@ function sts() {
             shift
             stsExtend "$@"
             ;;
+        "clear-config")
+            rm -f "$STS_USER_CONFIG_DIR/user-config.sh"
+            ;;
+        "clear-bin")
+            rm -rf "$STS_USER_CONFIG_DIR/bin"
+            ;;
+        "clone-source")
+            shift
+            stsCloneSource "$@"
+            ;;
         "set-config")
             shift
             stsWriteConfig "$@"

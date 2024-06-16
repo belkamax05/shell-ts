@@ -12,7 +12,6 @@ stsSystem "global/lists.sh"
 
 #? Functions
 # Loads globally to simplify dev of other modules, every function here will become available for subsequent scripts
-stsSystem "function/stsEcho.sh"
 stsSystem "function/sts.sh"
 stsSystem "function/stsRunScriptFile.sh"
 stsSystem "function/stsFindScriptName.sh"
@@ -26,6 +25,7 @@ stsSystem "function/stsGo.sh"
 stsSystem "function/stsCompile.sh"
 stsSystem "function/stsWriteConfig.sh"
 stsSystem "function/stsLoadConfig.sh"
+stsSystem "function/stsRunBin.sh"
 
 #? Triggers
 # Loads globally and covers all aspects of system-like commands, which need of special functionality to get triggered in advance
@@ -35,3 +35,5 @@ stsSystem "trigger/nav-default-extensions.sh"
 stsSystem "trigger/command-not-found-replace.sh"
 stsSystem "trigger/compile-go.sh"
 stsSystem "trigger/next-start.sh"
+
+stsSystem "modules/load-nvm.sh"

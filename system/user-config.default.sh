@@ -1,1 +1,1 @@
-export STS_DEBUG_LIFECYCLE=false
+export STS_DEBUG=false

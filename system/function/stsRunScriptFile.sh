@@ -2,7 +2,9 @@ function stsRunScriptFile() {
     local cmd="$1"
     local ext="${cmd##*.}"
 
-    local filePath=$(basename "$cmd" ."$ext")
+    local fileName=$(basename "$cmd" ."$ext")
+
+    sts-debug "Run script $fileName at $cmd"
 
     if [ ! -f "$cmd" ]; then
         return 1
@@ -22,10 +24,10 @@ function stsRunScriptFile() {
         dotnet script "$@"
         ;;
     "rs")
-        echo "Running with $filePath"
+        echo "Running with $fileName"
         mkdir -p $STS_DIR/temp/rustc
-        rustc "$@" -o "$STS_DIR/temp/rustc/$filePath"
-        $STS_DIR/temp/rustc/$filePath
+        rustc "$@" -o "$STS_DIR/temp/rustc/$fileName"
+        $STS_DIR/temp/rustc/$fileName
         ;;
     *)
         # echo "No file found with .sh, .js, .ts, or .cs extension"
