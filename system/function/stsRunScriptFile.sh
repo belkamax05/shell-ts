@@ -4,7 +4,7 @@ function stsRunScriptFile() {
 
     local fileName=$(basename "$cmd" ."$ext")
 
-    sts-debug "Run script $fileName at $cmd"
+    # sts-debug "Run script $fileName at $cmd"
 
     if [ ! -f "$cmd" ]; then
         return 1

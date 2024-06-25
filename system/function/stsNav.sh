@@ -11,6 +11,7 @@ function stsNav() {
     done
     # echo "Nav s1 cmd=$cmd, code_flag=$code_flag"
     if [ -z "$cmd" ]; then
+        sts-debug "l14: No command provided"
         if ((code_flag)); then
             code -r .
         fi
@@ -30,6 +31,7 @@ function stsNav() {
     local dir="${nav_list[$cmd]}"
     if [ -z "$dir" ]; then
         #? location in dictionary not found, applying original argument $cmd
+        sts-debug "l34: location in dictionary not found, applying original argument $cmd"
         dir=$cmd
     fi
 
@@ -37,6 +39,7 @@ function stsNav() {
     if [ -n "$dir" ]; then
         # echo "Cding dir... $dir"
         cd $dir
+        # load
         local newDir=$(pwd)
         if ((code_flag)); then
             code -r .
@@ -45,7 +48,6 @@ function stsNav() {
             echo "cd $newDir\nclear" >>"$STS_DIR/next_start.sh"
             restart
         fi
-
     fi
 
 }
