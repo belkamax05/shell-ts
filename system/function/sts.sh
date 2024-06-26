@@ -32,6 +32,11 @@ function sts() {
             shift
             stsNav "$@"
             ;;
+        "sample")
+            shift
+            stsRunCommand "sample/$@"
+            echo "POST SAMPLE statusCode: $? at $@"
+            ;;
         "extend")
             shift
             stsExtend "$@"

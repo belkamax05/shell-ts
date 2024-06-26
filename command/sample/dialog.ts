@@ -10,7 +10,10 @@ const run = async () => {
     ],
     required: false,
   });
-  console.log({ additionalTools });
+  console.log('Hi there2', { additionalTools });
+
+  // throw new Error('This is an error');
+  process.exit(123);
 };
 
 run();

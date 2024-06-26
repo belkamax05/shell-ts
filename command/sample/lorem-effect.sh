@@ -11,4 +11,10 @@ EOF
 
 # see https://github.com/ChrisBuilds/terminaltexteffects
 
-echo "$loremIpsum" | tte binarypath
+local effect="bouncyballs"
+
+# beams,binarypath,blackhole,bouncyballs,bubbles,burn,colorshift,crumble,decrypt,errorcorrect,
+# expand,fireworks,matrix,middleout,orbittingvolley,overflow,pour,print,rain,randomsequence,
+# rings,scattered,slice,slide,spotlights,spray,swarm,synthgrid,unstable,vhstape,waves,wipe
+
+echo "$loremIpsum" | tte $effect
